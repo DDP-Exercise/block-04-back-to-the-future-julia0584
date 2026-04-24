@@ -25,7 +25,7 @@
  *     Our clocks should be synced in no-time! Got it?
  *     No - Time! *laughs nervously*. Unfortunatley, I only
  *     have enough fuel for one ride. So we need to be 100%
- *     certain that it works. I'd suggest you add a button somewhere
+ *     certain that it works. I'd suggest you add a button somewheres
  *     that saves the current time into the localStorage.
  *
  *     Now hurry Marty! Or I will be stuck in the past forever!
