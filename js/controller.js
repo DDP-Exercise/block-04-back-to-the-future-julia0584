@@ -2,14 +2,31 @@
 
 import {digital} from "./view.digital.js";
 import {callTime} from "./model.time.js";
+import {analogoue} from "./view.analagoue.js";
+
+//erzeugt canvas für analoge Clock
+analogoue.init();
 
 function showTime(){
     let time = callTime();
-
+    //Doc Browns Clock updaten
     digital(time);
-
+    //Martys Clock updaten
+    analogoue.update(time);
 }
 setInterval(showTime, 1000);
+
+//Stopp Zeit und in local Storage speichern
+function click(){
+    let time = callTime();
+    localStorage.setItem("TIME", JSON.stringify(time));
+    console.log(time)//nur Kontrolle
+}
+
+const button = document.createElement("button");
+button.textContent = "!Stopp!";
+button.addEventListener("click", click);
+document.getElementById("btn").appendChild(button);
 
 
 /*******************************************************

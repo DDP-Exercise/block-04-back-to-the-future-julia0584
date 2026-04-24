@@ -11,14 +11,13 @@ export function callTime(){
                    seconds: DATE.getSeconds()
                    };
 
-    // LocalStorage
-    localStorage.setItem("TIME", JSON.stringify(TIME)); //speichern
-
     return TIME;
 }
 setInterval(callTime, 1000);
 
-const RESULT = callTime();
+
+
+
 
 
 
