@@ -1,4 +1,17 @@
 "use strict";
+
+import {digital} from "./view.digital.js";
+import {callTime} from "./model.time.js";
+
+function showTime(){
+    let time = callTime();
+
+    digital(time);
+
+}
+setInterval(showTime, 1000);
+
+
 /*******************************************************
  *     Back to the Future - 100p
  *
