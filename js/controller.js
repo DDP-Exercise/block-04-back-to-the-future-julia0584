@@ -1,4 +1,34 @@
 "use strict";
+
+import {digital} from "./view.digital.js";
+import {callTime} from "./model.time.js";
+import {analogoue} from "./view.analagoue.js";
+
+//erzeugt canvas für analoge Clock
+analogoue.init();
+
+function showTime(){
+    let time = callTime();
+    //Doc Browns Clock updaten
+    digital(time);
+    //Martys Clock updaten
+    analogoue.update(time);
+}
+setInterval(showTime, 1000);
+
+//Stopp Zeit und in local Storage speichern
+function click(){
+    let time = callTime();
+    localStorage.setItem("TIME", JSON.stringify(time));
+    console.log(time)//nur Kontrolle
+}
+
+const button = document.createElement("button");
+button.textContent = "!Stopp!";
+button.addEventListener("click", click);
+document.getElementById("btn").appendChild(button);
+
+
 /*******************************************************
  *     Back to the Future - 100p
  *
@@ -25,7 +55,7 @@
  *     Our clocks should be synced in no-time! Got it?
  *     No - Time! *laughs nervously*. Unfortunatley, I only
  *     have enough fuel for one ride. So we need to be 100%
- *     certain that it works. I'd suggest you add a button somewhere
+ *     certain that it works. I'd suggest you add a button somewheres
  *     that saves the current time into the localStorage.
  *
  *     Now hurry Marty! Or I will be stuck in the past forever!
