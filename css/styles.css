@@ -25,11 +25,6 @@ body{
     color: #FFE4E1;
 }
 
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* !!!! den folgenden Code für die visuelle Darstellung der digitalen Uhr habe ich aus dem Youtube Video "7 Segment Digital Clock - HTML + CSS + JS" von MinzCode !!!! */
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/* Stunden,Minuten,Sekunden nebeneinander in einer Zeile */
 .digital-watch .hour,
 .digital-watch .minute,
 .digital-watch .second {
@@ -37,11 +32,9 @@ body{
     display: inline-block;
     margin: 0px;
     flex-direction: column;
-    font-size: 0; /* verhindert ungewollte Abstände zwischen SVGs */
+    font-size: 0;
 }
 
-
-/* Doppelpunkte erstellen */
 .digital-watch .hour::before,
 .digital-watch .hour::after,
 .digital-watch .minute::before,
@@ -62,20 +55,17 @@ body{
     top: 90px;
 }
 
-/* svg nebeneinander mit abstand */
 .digital-watch svg {
     display: inline-block;
     margin: 20px;
 }
 
-/* alle Segmente die nicht gebraucht werden sind dunkel (inaktiv)*/
+
 .digital-watch svg .segment {
     fill: rgba(0,0,0,.15);
-    transition: .3s ease-in-out; /* Übergang beim Wechsel inaktiv -> aktiv*/
+    transition: .3s ease-in-out;
 }
 
-/*Segmente die pink sind wenn = aktiv*/
-/*Klasse num-xy -> in javascript definiert*/
 .digital-watch svg.num-0 .a, .digital-watch svg.num-0 .b,
 .digital-watch svg.num-0 .c, .digital-watch svg.num-0 .d,
 .digital-watch svg.num-0 .e, .digital-watch svg.num-0 .f,

@@ -1,6 +1,5 @@
 "use strict";
 
-// TIME abrufen und in HOURS, MINUTES und SECONDS zerlegen
 
 export function callTime(){
     const DATE = new Date();

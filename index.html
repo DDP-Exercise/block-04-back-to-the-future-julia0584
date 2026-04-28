@@ -10,20 +10,11 @@
 <div id="clocks">
     <div id="digital">
         <h5>Doc Brown</h5>
-
-        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-        <!-- !!!! den folgenden Code für die visuelle Darstellung der digitalen Uhr habe ich aus dem Youtube Video "7 Segment Digital Clock - HTML + CSS + JS" von MinzCode !!!! -->
-        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-        <!-- SVG => definiert typische Segmentform-->
-        <!-- mit <use> wiederverwenden -->
         <svg width="0" height="0" viewBox="0 0 0 0">
             <defs>
-                <!--horizontales Segment wird gebaut-->
                 <g id="unit-h">
                     <path d="M0 20 L20 40 L180 40 L200 20 L180 0 L20 0 Z"></path>
                 </g>
-                <!-- vertikales Segment wird gebaut-->
                 <g id="unit-v">
                     <path d="M20 0 L0 20 L0 180 L20 200 L40 180 L40 20 Z"></path>
                 </g>
@@ -31,7 +22,6 @@
         </svg>
 
         <div class="digital-watch">
-            <!-- erste Stelle Stunden -->
             <div class="hour">
                 <svg id="hour-1" class="num-0" width="65" height="120" viewBox="0 0 260 480">
                     <use xlink:href="#unit-h" class="segment a" x="30" y="0"></use>     <!-- oben -->
@@ -42,7 +32,6 @@
                     <use xlink:href="#unit-v" class="segment f" x="0" y="30"></use>     <!-- oben links -->
                     <use xlink:href="#unit-h" class="segment g" x="30" y="220"></use>   <!-- mitte -->
                 </svg>
-                <!--zweite Stelle Stunden-->
                 <svg id="hour-2" class="num-0" width="65" height="120" viewBox="0 0 260 480">
                     <use xlink:href="#unit-h" class="segment a" x="30" y="0"></use>
                     <use xlink:href="#unit-v" class="segment b" x="220" y="30"></use>
@@ -53,8 +42,6 @@
                     <use xlink:href="#unit-h" class="segment g" x="30" y="220"></use>
                 </svg>
             </div>
-
-            <!--Minuten-->
             <div class="minute">
                 <svg id="minute-1" class="num-0" width="65" height="120" viewBox="0 0 260 480">
                     <use xlink:href="#unit-h" class="segment a" x="30" y="0"></use>
@@ -75,8 +62,6 @@
                     <use xlink:href="#unit-h" class="segment g" x="30" y="220"></use>
                 </svg>
             </div>
-
-            <!--Sekunden-->
             <div class="second">
                 <svg id="second-1" class="num-0" width="65" height="120" viewBox="0 0 260 480">
                     <use xlink:href="#unit-h" class="segment a" x="30" y="0"></use>
