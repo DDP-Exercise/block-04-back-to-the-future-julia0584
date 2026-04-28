@@ -1,10 +1,106 @@
 body{
-    background-image: url('../img/BTTFII.webp');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/BTTFII.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     width: 100vw;
-    height: 100vh;
     padding: 0;
-    margin: 0;
+    margin:0;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 50px;
+    color:pink;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#btn button{
+    padding: 20px 20px;
+    margin: 90px;
+    background: pink;
+    font-family: "Arial Rounded MT Bold";
+    font-size:30px;
+    color: #FFE4E1;
+}
+
+.digital-watch .hour,
+.digital-watch .minute,
+.digital-watch .second {
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+    flex-direction: column;
+    font-size: 0;
+}
+
+.digital-watch .hour::before,
+.digital-watch .hour::after,
+.digital-watch .minute::before,
+.digital-watch .minute::after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+}
+.digital-watch .hour::before,
+.digital-watch .minute::before {
+    top: 40px;
+}
+.digital-watch .hour::after,
+.digital-watch .minute::after {
+    top: 90px;
+}
+
+.digital-watch svg {
+    display: inline-block;
+    margin: 20px;
+}
+
+
+.digital-watch svg .segment {
+    fill: rgba(0,0,0,.15);
+    transition: .3s ease-in-out;
+}
+
+.digital-watch svg.num-0 .a, .digital-watch svg.num-0 .b,
+.digital-watch svg.num-0 .c, .digital-watch svg.num-0 .d,
+.digital-watch svg.num-0 .e, .digital-watch svg.num-0 .f,
+
+.digital-watch svg.num-1 .b, .digital-watch svg.num-1 .c,
+
+.digital-watch svg.num-2 .a, .digital-watch svg.num-2 .b,
+.digital-watch svg.num-2 .d, .digital-watch svg.num-2 .e,
+.digital-watch svg.num-2 .g,
+
+.digital-watch svg.num-3 .a, .digital-watch svg.num-3 .b,
+.digital-watch svg.num-3 .c, .digital-watch svg.num-3 .d,
+.digital-watch svg.num-3 .g,
+
+.digital-watch svg.num-4 .b, .digital-watch svg.num-4 .c,
+.digital-watch svg.num-4 .f, .digital-watch svg.num-4 .g,
+
+.digital-watch svg.num-5 .a, .digital-watch svg.num-5 .c,
+.digital-watch svg.num-5 .d, .digital-watch svg.num-5 .f,
+.digital-watch svg.num-5 .g,
+
+.digital-watch svg.num-6 .a, .digital-watch svg.num-6 .c,
+.digital-watch svg.num-6 .d, .digital-watch svg.num-6 .e,
+.digital-watch svg.num-6 .f, .digital-watch svg.num-6 .g,
+
+.digital-watch svg.num-7 .a, .digital-watch svg.num-7 .b,
+.digital-watch svg.num-7 .c,
+
+.digital-watch svg.num-8 .a, .digital-watch svg.num-8 .b,
+.digital-watch svg.num-8 .c, .digital-watch svg.num-8 .d,
+.digital-watch svg.num-8 .e, .digital-watch svg.num-8 .f,
+.digital-watch svg.num-8 .g,
+
+.digital-watch svg.num-9 .a, .digital-watch svg.num-9 .b,
+.digital-watch svg.num-9 .c, .digital-watch svg.num-9 .d,
+.digital-watch svg.num-9 .f, .digital-watch svg.num-9 .g {
+    fill:pink;
 }
